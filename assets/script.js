@@ -1,19 +1,20 @@
-let emailElement = document.querySelector('#email');
-let messageElement = document.querySelector('#message');
-
-let submitButton = document.querySelector('#submit-button');
-submitButton.addEventListener('click', function(e) {
-	e.preventDefault();
-
-	let emailValue = emailElement.value;
-	let messageValue = messageElement.value;
+(function(){ 
 	
-	if (emailValue.includes('@')) {
-		//all good
-		alert('thank you for your message');
-	} else {
-		alert('oh no. That does not look like a valid email address. Please try again.')
-	}
-})
+	"use strict";
+	const emailElement = document.querySelector('#email');
+	const messageElement = document.querySelector('#message');
 
+	const submitButton = document.querySelector('#submit-button');
+	submitButton.addEventListener('click', function(e) {
+		
+		const emailValue = emailElement.value;
+		const messageValue = messageElement.value;
+
+		if (emailValue.includes('@')) {
+			alert('Thank you for your message. Please reach out on my LinkedIn page.');
+		} else {
+			alert('Oh no, that does not look like a valid email address. Please try again.')
+		}
+	})
+})();
 
